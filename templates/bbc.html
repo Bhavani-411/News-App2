@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Web App</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+</head>
+<body>
+
+<div class="jumbotron" style="color:black">
+    <h1 style="color:black">
+        This is the latest and best news
+    </h1>
+
+</div>
+
+<div class="container">
+    {% for new,des,i in mylist%}
+    <img src="{{i}}" alt="">
+    <h3>News:</h3>{{new}}
+    {{value | linebreaks}}
+
+    <h4>Description:</h4>{{des}}
+    {{value | linebreaks}}
+
+    {% endfor %}
+</div>
+</body>
+</html>
